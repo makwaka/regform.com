@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <h1>MOLO UNIVERSITY</h1>
     <h2>Student registration form</h2>
    <p> Instructions:</p>
-   <p>Fill the blank areas. Areas marked with * must be ffilled before submitting.</p>
+   <p>Fill the blank areas. Areas marked with * must be filled before submitting.</p>
     <form input="text" name="name" id="regform" action="" method="get">
 <br>
 <hr>
@@ -19,11 +20,13 @@
 <br><br>
 <label for="surname" class="surname">Surname :*<span><input type="text" id="surname" required></span></label>
 <br><br>
-<label for="secondname" class="secondname">Secondname:* <span><input type="text" id="secondname" required></span></label>
+<label for="secondname" class="secondname">Second name:* <span><input type="text" id="secondname" required></span></label>
 <br>
 <br>
 <label for="sex" class="sex">Select sex:*</label>
 <select name="sex" id="sex" required>
+
+<option value="select">Select sex</option>
 <option value="male">Male</option>
 <option value="female">female</option>
 </select>
@@ -31,13 +34,14 @@
 <br>
 <label for="county" class="country">Country of origin:*</label>
 <select name="country" id="country" required >
+    <option value="country">Select country</option>
     <option value="Kenya">Kenya</option>
     <option value="Uganda">Uganda</option>
     <option value="Egypt">Egypt</option>
     <option value="Congo">Congo</option>
     <option value="Germany">Germany</option>
     <option value="Ethiopia">Ethiopia</option>
-    <option value="Rwanda" selected>Rwanda</option>
+    <option value="Rwanda" >Rwanda</option>
 </select>
 <br><br> 
 <label for="DOB" class="dob">Date of birth: *<span><input type="text" required></span></label>
@@ -45,28 +49,29 @@
 <label for="phone" class="phone">Phone number:*</label> 
 <input type="tel" class="phone" name="phone" placeholder="123-45-67-89" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
 
-<hr size="20px" >
+
 <label for="views" class="views">Write a statement that describes the type of learning environment you'd want:</label>
-<textarea name="views" id="views" cols="30" rows="10" placeholder="Type your views here in less than 150 characters." ></textarea>
-<br><br>
-<br><hr size="25px" >
-<label for="intrest" class="interest" >Select a statement that best describes your interestto join us: </label>
-<input type="radio" name="interest" id="very" value="very">Very interested
-<input type="radio" name="interest" id="interested" value="interested">Interested
-<input type="radio" name="interest" id="moderate" value="moderate">Moderately interested
+<textarea name="views" id="views" cols="30" rows="4" placeholder="Type your views here in less than 150 characters..." ></textarea>
 <br><br>
 <br>
-<label for="studyarea" class="studyarea">Select the study area(s) of interest:</label> 
-<input type="checkbox" name="studyarea" id="science">Science
-<input type="checkbox" name="studyarea" id="technology">Technology
-<input type="checkbox" name="studyarea" id="education">Education
-<input type="checkbox" name="studyarea" id="agriculture">Agriculture
-<input type="checkbox" name="studyarea" id="arts">arts
+<label for="intrest"  >Select a statement that best describes your interest to join us: </label>
+<input class="interest" type="radio" name="interest" id="very" value="very">Very interested
+<input class="interest" type="radio" name="interest" id="interested" value="interested">Interested
+<input class="interest" type="radio" name="interest" id="moderate" value="moderate">Moderately interested
 <br><br>
 <br>
-<button type="button" onclick="alert('Your registraion form has been submitted')">submit</button>
-<br><br><br>
+<label for="studyarea" >Select the study area(s) of interest: </label> 
+<input class="studyarea" type="checkbox" name="studyarea" id="science">Science
+<input class="studyarea" type="checkbox" name="studyarea" id="technology">Technology
+<input class="studyarea" type="checkbox" name="studyarea" id="education">Education
+<input class="studyarea" type="checkbox" name="studyarea" id="agriculture">Agriculture
+<input class="studyarea" type="checkbox" name="studyarea" id="arts">arts
+<br><br>
 <progress id="progress" max="100" value="70">70%</progress>
+<br>
+<input type="submit" onclick="alert('Your registration form has been submitted')" value="submit"/>
+<br><br><br>
+
     </form>
 </body>
 </html>
